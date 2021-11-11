@@ -1,13 +1,143 @@
 body {
+  background-color: #f9f7f7;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.result-container {
+  display: flex;
+  justify-content: center;
+}
+
+.result-card {
+  color: #3f72af;
+  width: 400px;
+  height: 400px;
+  display: inline-block;
+  background-color: #ffffff;
+  border-radius: 5px rgb(255, 255, 255);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 10px;
+  background-color: #dbe2ef;
+}
+
+h1 {
+  color: #112d4e;
+}
+
+.header {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-link {
+  padding: 5px;
+  color: aquamarine;
+  font-size: large;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.propInfoForm {
+  color: #3f72af;
+  margin: 0 auto;
+  border-radius: 5px rgb(255, 255, 255);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13);
+  max-width: 700px;
+  padding-bottom: 50px;
+  background-color: #dbe2ef;
+}
+
+form {
+  width: 80%;
+  margin: 0 auto;
+}
+
+label,
+input {
+  /* In order to define widths */
+  display: inline-block;
+}
+
+label {
+  width: 30%;
+  /* Positions the label text beside the input */
+  text-align: right;
+}
+
+label + input {
+  width: 30%;
+  /* Large margin-right to force the next element to the new-line
+           and margin-left to create a gutter between the label and input */
+  margin: 0 30% 0 4%;
+}
+
+/* form button */
+.submit-form {
+  position: relative;
+  background-color: #255b99;
+  border: none;
+  font-size: 18px;
+  color: #ffffff;
+  padding: 12px;
+  width: 32%;
+  margin: 2% 0 0 4%;
+  text-align: center;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.submit-form:hover {
+  background-color: #ffffff;
+  color: #3f72af;
+}
+
+.submit-form:after {
+  content: "";
+  background: #f1f1f1;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s;
+}
+
+.submit-form:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s;
+}
+
+/* back button */
+.back-button {
+  position: relative;
+  background-color: #255b99;
+  border: none;
+  font-size: 18px;
+  color: #ffffff;
+  padding: 12px;
+  width: 32%;
+  margin-top: 10px;
+  text-align: center;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
 }
